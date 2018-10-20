@@ -1,0 +1,15 @@
+<h2>ログイン画面</h2>
+
+<%= notice %>
+
+<%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+
+  <%= f.label "メールアドレス" %>
+  <%= f.text_field :email %>
+  
+  <%= f.label "パスワード" %>
+  <%= f.password_field :password %>
+  
+  <%= f.submit 'ログイン' %>
+  
+ <% end %>
